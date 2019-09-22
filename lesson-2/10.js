@@ -1,7 +1,7 @@
 const array = [2, 5, 9, 15, 0, 4];
 
-for (let value of array) {
-	if (value > 3 && value < 10){
-		console.log(value + '\n');
+for (let i = 0; i < array.length; i++){
+	if (array[i] > 3 && array[i] < 10){
+		console.log(array[i] + '\n');		
 	}
 }
