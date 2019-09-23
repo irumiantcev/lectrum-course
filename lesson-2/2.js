@@ -1,3 +1,5 @@
-var message = (login == 'Pitter') ? message = 'Hi'      :
-	      (login == 'Owner')  ? message = 'Hello'   :
-	      (login == '')       ? message = 'unknown' : message = '';
+var message = (login == 'Pitter') ? 'Hi'  :
+	          (login == 'Owner')  ? 'Hello'   :
+	          (login == '')       ? 'unknown' : '';
+
+console.log(message);
