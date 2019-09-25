@@ -6,5 +6,5 @@ while (n > 50){
 	num++;
 }
 
-console.log('Число ' + n + '\n');
-console.log('Кол-во итераций ' + num);
+console.log(`Число ${n}`);
+console.log(`Кол-во итераций ${num}`);
