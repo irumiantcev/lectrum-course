@@ -11,10 +11,10 @@
 
 // Решение
 
-function upperCaseFirst(word) {
-	if (typeof word === 'string'){
-		const firstLetterUpper = word.slice(0,1).toUpperCase();
-		const otherLetters = word.slice(1);
+function upperCaseFirst(string) {
+	if (typeof string === 'string'){
+		const firstLetterUpper = string.slice(0,1).toUpperCase();
+		const otherLetters = string.slice(1);
 		return firstLetterUpper + otherLetters;
 	}
 }

@@ -14,14 +14,9 @@
 
 function checkSpam(source, example){
 	if (typeof source === 'string' && typeof example === 'string'){
-
 		source = source.toLowerCase();
 		example = example.toLowerCase();
-
-		if (source.indexOf(example) > -1)
-			return true;
-		else
-			return false;
+		return source.includes(example);
 	}else{
 		return false;
 	}
