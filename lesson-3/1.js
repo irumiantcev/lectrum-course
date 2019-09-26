@@ -16,6 +16,8 @@ function upperCaseFirst(string) {
 		const firstLetterUpper = string.slice(0,1).toUpperCase();
 		const otherLetters = string.slice(1);
 		return firstLetterUpper + otherLetters;
+	}else{
+		return false;
 	}
 }
 
