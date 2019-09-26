@@ -1,1 +1,3 @@
 # lectrum-course
+
+JavaScript course
