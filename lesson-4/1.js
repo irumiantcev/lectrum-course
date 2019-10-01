@@ -11,6 +11,7 @@
 
 const person = {};
 
+// Решение
 
 Object.defineProperty(person, 'salary', {
 	get() {
@@ -20,9 +21,6 @@ Object.defineProperty(person, 'salary', {
 		return (lastDay.getDate() - today.getDate() > 20) ?  'good salary' : 'bad salary';
 	}
 });
-
-
-// Решение
 
 const example1 = person.salary;
 
