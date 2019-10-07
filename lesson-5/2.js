@@ -11,13 +11,15 @@
 // Решение
 
 function f() {
-	if (arguments.length === 0)
+	if (arguments.length === 0) {
 		throw new Error (`No arguments`);
+	}
 
 	let sum = 0;
-	for(const item of arguments){
-		if (typeof item !== 'number')
+	for(const item of arguments) {
+		if (typeof item !== 'number') {
 			throw new Error (`Argument ${item} is not a number`);
+		}
 		sum += item;
 	}
 

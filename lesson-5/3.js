@@ -10,12 +10,14 @@
 // Решение
 
 function f(a, b, c){
-	if (arguments.length < 3)
+	if (arguments.length < 3) {
 		throw new Error(`Insufficient arguments`);
+	}
 
-	for(const item of arguments){
-		if (typeof item !== 'number')
+	for(const item of arguments) {
+		if (typeof item !== 'number') {
 			throw new Error(`Argument ${item} is not a number`);
+		}
 	}
 
 	const result = (a - b) / c;

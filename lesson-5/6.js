@@ -13,13 +13,15 @@
 // Решение
 
 function isEven(n){
-	if (arguments.length === 0)
+	if (arguments.length === 0) {
 		throw new Error(`Insufficient arguments`);
+	}
 
-	if (typeof n !== 'number')
+	if (typeof n !== 'number') {
 		throw new Error(`Argument ${n} is not a number`);
+	}
 
-	const result = (n % 2) ? false : true;
+	const result = n % 2 === 0;
 
 	return result;
 }

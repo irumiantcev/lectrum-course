@@ -18,23 +18,26 @@
 
 const array = [1, 2, 3];
 
+// Решение
 
-function forEach(array, callback){
-	if (arguments.length !== 2)
+function forEach(array, callback) {
+	if (arguments.length !== 2) {
 		throw new Error(`Wrong number of arguments`);
+	}
 
-	if (!Array.isArray(array))
+	if (!Array.isArray(array)) {
 		throw new Error(`Argument ${array} is not an array`);
+	}
 
-	if (typeof callback !== 'function')
+	if (typeof callback !== 'function') {
 		throw new Error(`Argument ${callback} is not a function`);
+	}
 
     for (let i = 0; i < array.length; i++) {
         callback(array[i], i, array);
     }
 }
 
-// Решение
 
 const result = forEach(array, (element, index, arrayRef) => {
     console.log(`${index}:`, element, arrayRef);

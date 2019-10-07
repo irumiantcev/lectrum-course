@@ -20,40 +20,37 @@
 // Решение
 
 function f(n){
-	if (arguments.length === 0)
+	if (arguments.length === 0) {
 		throw new Error(`Insufficient arguments`);
+	}
 
-	if (typeof n !== 'number')
+	if (typeof n !== 'number') {
 		throw new Error(`Argument ${n} is not a number`);
+	}
 
-	if (n < 1 || n > 7)
+	if (n < 1 || n > 7) {
 		throw new Error(`Number ${n} is out of range`);	
+	}
 
-	if (!Number.isInteger(n))
+	if (!Number.isInteger(n)) {
 		throw new Error(`Number ${n} is not integer`);
+	}
 
 	switch (n) {
 		case 1:
-			return 'Воскресенье'
-			break;
+			return 'Воскресенье';
 		case 2:
-			return 'Понедельник'
-			break;
+			return 'Понедельник';
 		case 3:
-			return 'Вторник'
-			break;
+			return 'Вторник';
 		case 4:
-			return 'Среда'
-			break;
+			return 'Среда';
 		case 5:
-			return 'Четверг'
-			break;
+			return 'Четверг';
 		case 6:
-			return 'Пятница'
-			break;
+			return 'Пятница';
 		case 7:
-			return 'Суббота'
-			break;
+			return 'Суббота';
 	}
 }
 

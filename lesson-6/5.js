@@ -21,18 +21,19 @@ const INITIAL_ACCUMULATOR = 6;
 
 // Решение
 
-
-function reduce(array, callback, accumulator){
-	if (arguments.length < 2)
+function reduce(array, callback, accumulator) {
+	if (arguments.length < 2) {
 		throw new Error(`Wrong number of arguments`);
+    }
 
-	if (!Array.isArray(array))
+	if (!Array.isArray(array)) {
 		throw new Error(`Argument ${array} is not an array`);
+    }
 
-	if (typeof callback !== 'function')
+	if (typeof callback !== 'function') {
 		throw new Error(`Argument ${callback} is not a function`);
-    
-    
+    }
+
     let accumulatorValue = accumulator ? accumulator : array[0];
 
     for (let i = 0; i < array.length; i++) {
