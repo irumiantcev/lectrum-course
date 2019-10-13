@@ -12,32 +12,32 @@
 // Решение
 
 function getDivisors(n){
-	if (arguments.length === 0) {
-		throw new Error(`Insufficient arguments`);
-	}
+    if (arguments.length === 0) {
+        throw new Error(`Insufficient arguments`);
+    }
 
-	if (typeof n !== 'number') {
-		throw new Error(`Argument ${n} is not a number`);
-	}
+    if (typeof n !== 'number') {
+        throw new Error(`Argument ${n} is not a number`);
+    }
 
-	if (n < 1) {
-		throw new Error(`Number ${n} is out of range`);	
-	}
+    if (n < 1) {
+        throw new Error(`Number ${n} is out of range`); 
+    }
 
-	if (!Number.isInteger(n)) {
-		throw new Error(`Number ${n} is not integer`);
-	}
+    if (!Number.isInteger(n)) {
+        throw new Error(`Number ${n} is not integer`);
+    }
 
-	const divisors = [];
-	let i = 1;
+    const divisors = [];
+    let i = 1;
 
-	do {
-		if (n % i === 0) {
-			divisors.push(i);
-		}
-	} while (i++ !== n);
+    do {
+        if (n % i === 0) {
+            divisors.push(i);
+        }
+    } while (i++ !== n);
 
-	return divisors;
+    return divisors;
 }
 
 

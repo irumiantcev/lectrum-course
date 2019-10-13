@@ -18,25 +18,25 @@
 // Решение
 
 function f(arr){
-	if (arguments.length === 0) {
-		throw new Error(`Insufficient arguments`);
-	}
+    if (arguments.length === 0) {
+        throw new Error(`Insufficient arguments`);
+    }
 
-	if (!Array.isArray(arr)) {
-		throw new Error(`Argument ${arr} is not an array`);	
-	}
+    if (!Array.isArray(arr)) {
+        throw new Error(`Argument ${arr} is not an array`); 
+    }
 
-	if (arr.length === 0) {
-		throw new Error(`Empty array`);
-	}
+    if (arr.length === 0) {
+        throw new Error(`Empty array`);
+    }
 
-	console.log(arr[0]);
+    console.log(arr[0]);
 
-	arr.splice(0, 1);
+    arr.splice(0, 1);
 
-	if (arr.length !== 0) {
-		f(arr);
-	}
+    if (arr.length !== 0) {
+        f(arr);
+    }
 }
 
 

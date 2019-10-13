@@ -21,21 +21,21 @@ const array = [1, 2, 'Добро пожаловать.', 4, 5, 6];
 // Решение
 
 function some(array, callback) {
-	if (arguments.length !== 2) {
-		throw new Error(`Wrong number of arguments`);
+    if (arguments.length !== 2) {
+        throw new Error(`Wrong number of arguments`);
     }
 
-	if (!Array.isArray(array)) {
-		throw new Error(`Argument ${array} is not an array`);
+    if (!Array.isArray(array)) {
+        throw new Error(`Argument ${array} is not an array`);
     }
 
-	if (typeof callback !== 'function') {
-		throw new Error(`Argument ${callback} is not a function`);
+    if (typeof callback !== 'function') {
+        throw new Error(`Argument ${callback} is not a function`);
     }
     
     for (let i = 0; i < array.length; i++) {
         if (callback(array[i], i, array)) {
-        	return true;
+            return true;
         }
     }
 

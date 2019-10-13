@@ -20,38 +20,38 @@
 // Решение
 
 function f(n){
-	if (arguments.length === 0) {
-		throw new Error(`Insufficient arguments`);
-	}
+    if (arguments.length === 0) {
+        throw new Error(`Insufficient arguments`);
+    }
 
-	if (typeof n !== 'number') {
-		throw new Error(`Argument ${n} is not a number`);
-	}
+    if (typeof n !== 'number') {
+        throw new Error(`Argument ${n} is not a number`);
+    }
 
-	if (n < 1 || n > 7) {
-		throw new Error(`Number ${n} is out of range`);	
-	}
+    if (n < 1 || n > 7) {
+        throw new Error(`Number ${n} is out of range`); 
+    }
 
-	if (!Number.isInteger(n)) {
-		throw new Error(`Number ${n} is not integer`);
-	}
+    if (!Number.isInteger(n)) {
+        throw new Error(`Number ${n} is not integer`);
+    }
 
-	switch (n) {
-		case 1:
-			return 'Воскресенье';
-		case 2:
-			return 'Понедельник';
-		case 3:
-			return 'Вторник';
-		case 4:
-			return 'Среда';
-		case 5:
-			return 'Четверг';
-		case 6:
-			return 'Пятница';
-		case 7:
-			return 'Суббота';
-	}
+    switch (n) {
+        case 1:
+            return 'Воскресенье';
+        case 2:
+            return 'Понедельник';
+        case 3:
+            return 'Вторник';
+        case 4:
+            return 'Среда';
+        case 5:
+            return 'Четверг';
+        case 6:
+            return 'Пятница';
+        case 7:
+            return 'Суббота';
+    }
 }
 
 const example1 = f(1); // Воскресенье

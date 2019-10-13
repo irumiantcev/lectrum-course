@@ -1,3 +1,3 @@
 var message = (login == 'Pitter') ? 'Hi'      :
-	      (login == 'Owner')  ? 'Hello'   :
-	      (login == '')       ? 'unknown' : '';
+              (login == 'Owner')  ? 'Hello'   :
+              (login == '')       ? 'unknown' : '';

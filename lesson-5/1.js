@@ -10,17 +10,17 @@
 // Решение
 
 function f(n) {
-	if (arguments.length === 0) {
-		throw new Error (`No arguments`);
-	}
-	
-	if (typeof n !== 'number') {
-		throw new Error(`Argument ${n} is not a number`);
-	}
+    if (arguments.length === 0) {
+        throw new Error (`No arguments`);
+    }
+    
+    if (typeof n !== 'number') {
+        throw new Error(`Argument ${n} is not a number`);
+    }
 
-	const cube = n ** 3;
+    const cube = n ** 3;
 
-	return cube;
+    return cube;
 }
 
 console.log(f(2)); // 8

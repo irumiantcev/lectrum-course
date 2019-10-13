@@ -12,14 +12,15 @@
 
 // Решение
 
-function checkSpam(source, example){
-	if (typeof source === 'string' && typeof example === 'string'){
-		source = source.toLowerCase();
-		example = example.toLowerCase();
-		return source.includes(example);
-	}else{
-		return false;
-	}
+function checkSpam(source, example) {
+    if (typeof source === 'string' && typeof example === 'string') {
+        source = source.toLowerCase();
+        example = example.toLowerCase();
+
+        return source.includes(example);
+    } else {
+        return false;
+    }
 }
 
 const example1 = checkSpam('pitterXXX@gmail.com', 'xxx'); // true

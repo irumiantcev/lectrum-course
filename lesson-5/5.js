@@ -13,21 +13,21 @@
 // Решение
 
 function isPositive(n) {
-	if (arguments.length === 0) {
-		throw new Error(`Insufficient arguments`);
-	}
+    if (arguments.length === 0) {
+        throw new Error(`Insufficient arguments`);
+    }
 
-	if (typeof n !== 'number') {
-		throw new Error(`Argument ${n} is not a number`);
-	}
+    if (typeof n !== 'number') {
+        throw new Error(`Argument ${n} is not a number`);
+    }
 
-	if (Math.sign(n) === 1) {
-		return true;
-	} else if (Math.sign(n) === -1) {
-		return false;
-	} else {
-		throw new Error(`Failed to check number`);
-	}
+    if (Math.sign(n) === 1) {
+        return true;
+    } else if (Math.sign(n) === -1) {
+        return false;
+    } else {
+        throw new Error(`Failed to check number`);
+    }
 }
 
 const example1 = isPositive(-3); // false

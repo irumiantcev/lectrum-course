@@ -21,17 +21,17 @@ const person = {};
 // Решение
 
 Object.defineProperties(person, {
-	rate: {
-		value: 0,
-		writable: true
-	},
-	salary: {
-		get() {
-			const today = new Date().getDate();
+    rate: {
+        value: 0,
+        writable: true
+    },
+    salary: {
+        get() {
+            const today = new Date().getDate();
 
-			return this.rate * today;
-		}
-	}
+            return this.rate * today;
+        }
+    }
 });
 
 

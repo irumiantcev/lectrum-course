@@ -16,16 +16,16 @@
 // Решение
 
 
-function truncate(string, maxLength){
-	if (typeof string === 'string' && typeof maxLength === 'number'){
-		if (string.length > maxLength && maxLength > 3){
-			return string.slice(0, maxLength-3).concat('...');
-		}else{
-			return string;
-		}
-	}else{
-		return false;
-	}
+function truncate(string, maxLength) {
+    if (typeof string === 'string' && typeof maxLength === 'number') {
+        if (string.length > maxLength && maxLength > 3) {
+            return string.slice(0, maxLength-3).concat('...');
+        } else {
+            return string;
+        }
+    } else {
+        return false;
+    }
 }
 
 const example1 = truncate('Вот, что мне хотелось бы сказать на эту тему:', 21); // 'Вот, что мне хотел...'

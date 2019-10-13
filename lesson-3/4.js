@@ -15,13 +15,14 @@ const PRICE = '$120';
 
 // Решение
 
-function extractCurrencyValue(source){
-	if (typeof source == 'string'){
-		const number = source.slice(1);
-		return number - 0;
-	}else{
-		return null;
-	}
+function extractCurrencyValue(source) {
+    if (typeof source == 'string') {
+        const number = source.slice(1);
+
+        return number - 0;
+    } else {
+        return null;
+    }
 }
 
 const example1 = extractCurrencyValue(PRICE); // 120
