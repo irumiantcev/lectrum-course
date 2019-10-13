@@ -16,40 +16,40 @@
  */
 
 const array = [
-	false,
-	'Привет.',
-	2,
-	'Здравствуй.',
-	[],
-	'Прощай.',
-	{
-		name: 'Уолтер',
-		surname: 'Уайт',
-	},
-	'Приветствую.',
+    false,
+    'Привет.',
+    2,
+    'Здравствуй.',
+    [],
+    'Прощай.',
+    {
+        name: 'Уолтер',
+        surname: 'Уайт',
+    },
+    'Приветствую.',
 ];
 
 // Решение
 
 function inspect(array) {
-	if (arguments.length === 0) {
-		throw new Error (`No arguments`);
-	}
+    if (arguments.length === 0) {
+        throw new Error (`No arguments`);
+    }
 
-	if (!Array.isArray(array)) {
-		throw new Error (`Argument ${array} is not an array`);
-	}
+    if (!Array.isArray(array)) {
+        throw new Error (`Argument ${array} is not an array`);
+    }
 
-	let result = [];
+    let result = [];
 
-	result = array.filter(function(item) {
-		return typeof item === 'string';
-	})
-	.map(function(item) {
-		return item.length;
-	});
+    result = array.filter(function(item) {
+        return typeof item === 'string';
+    })
+    .map(function(item) {
+        return item.length;
+    });
 
-	return result;
+    return result;
 }
 
 const result = inspect(array);

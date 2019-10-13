@@ -13,21 +13,21 @@
 // Решение
 
 function createArray(value, count){
-	if (arguments.length < 2) {
-		throw new Error(`Wrong number of arguments`);
-	}
+    if (arguments.length < 2) {
+        throw new Error(`Wrong number of arguments`);
+    }
 
-	if (typeof value !== 'number' && typeof value !== 'string'  && typeof value !== 'object' && !Array.isArray(value) || value === null) {
-		throw new Error(`${value} - Invalid argument type`);
-	}
+    if (typeof value !== 'number' && typeof value !== 'string'  && typeof value !== 'object' && !Array.isArray(value) || value === null) {
+        throw new Error(`${value} - Invalid argument type`);
+    }
 
-	if (typeof count !== 'number') {
-		throw new Error(`Argument ${count} is not a number`);
-	}
+    if (typeof count !== 'number') {
+        throw new Error(`Argument ${count} is not a number`);
+    }
 
-	const result = new Array(count).fill(value);
+    const result = new Array(count).fill(value);
 
-	return result;
+    return result;
 }
 
 const result = createArray('x', 5);
