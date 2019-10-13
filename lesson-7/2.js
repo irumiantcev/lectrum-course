@@ -22,28 +22,28 @@
 
 function collect(array) {
 	if (arguments.length === 0) {
-        throw new Error (`No arguments`);
-    }
+		throw new Error (`No arguments`);
+	}
 
-    if (!Array.isArray(array)) {
-        throw new Error (`Argument ${array} is not an array`);
-    }
+	if (!Array.isArray(array)) {
+		throw new Error (`Argument ${array} is not an array`);
+	}
 
-    const sum = array.reduce(function(acc, value) {
-    	if (Array.isArray(value)) {
-    		acc += collect(value);
-    	} else {
-		    if (typeof value !== 'number') {
-		        throw new Error (`Argument ${value} is not a number`);
-		    }
+	const sum = array.reduce(function(acc, value) {
+		if (Array.isArray(value)) {
+			acc += collect(value);
+		} else {
+			if (typeof value !== 'number') {
+				throw new Error (`Argument ${value} is not a number`);
+			}
 
-    		acc += value;
-    	}
+			acc += value;
+		}
 
-    	return acc;
-    }, 0);
+		return acc;
+	}, 0);
 
-    return sum;
+	return sum;
 }
 
 const array1 = [[[1, 2], [1, 2]], [[2, 1], [1, 2]]];

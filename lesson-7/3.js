@@ -23,7 +23,7 @@ function createArray(value, count){
 
 	if (typeof count !== 'number') {
 		throw new Error(`Argument ${count} is not a number`);
-	}	
+	}
 
 	const result = new Array(count).fill(value);
 
