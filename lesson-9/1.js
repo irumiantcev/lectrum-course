@@ -21,19 +21,19 @@ function shallowMerge(object1, object2) {
         throw new Error (`No arguments`);
     }
 
-	const resultObject = {};
+    const resultObject = {};
 
-	for (const item of arguments) {
-	    if (typeof item !== 'object') {
-	        throw new Error (`Argument ${item} is not an object`);
-	    }		
+    for (const item of arguments) {
+        if (typeof item !== 'object') {
+            throw new Error (`Argument ${item} is not an object`);
+        }       
 
-		const properties = Object.getOwnPropertyDescriptors(item);
-		
-		Object.defineProperties(resultObject, properties);
-	}
+        const properties = Object.getOwnPropertyDescriptors(item);
+        
+        Object.defineProperties(resultObject, properties);
+    }
 
-	return resultObject;
+    return resultObject;
 }
 
 
