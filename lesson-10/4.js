@@ -31,21 +31,32 @@
 const compose = (...args) => {
     args.reverse();
 
-    let result = "";
+    const resultFunction = (n = "") => {
+        let result;
 
-    for (func of args) {
-        if (typeof func !== 'function') {
-            throw new Error(`Argument ${func} is not a function`);
+        for (let i = 0; i < args.length; i++) {
+            const func = args[i];
+
+            if (typeof func !== 'function') {
+                throw new Error(`Argument ${func} is not a function`);
+            }
+
+            if (func() === undefined) {
+                throw new Error(`Function ${func} doesn't return anything`);
+            }
+
+            if (i == 0){
+                result = func(n);
+            }
+            else{
+                result = func(result);
+            }
         }
 
-        if (func() === undefined) {
-            throw new Error(`Function ${func} doesn't return anything`);
-        }
+        return result;
+    };
 
-        result = func(result);
-    }
-
-    return (n = "") => n + result;
+    return resultFunction;
 }
 
 const result1 = compose(
