@@ -34,7 +34,7 @@ const bind = (func, object, ...args) => {
     const resultFunction = () => func.call(object, ...args);
 
     return resultFunction;
-}
+};
 
 
 function getName(greeting, message) {

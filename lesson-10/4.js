@@ -57,7 +57,7 @@ const compose = (...args) => {
     };
 
     return resultFunction;
-}
+};
 
 const result1 = compose(
     prevResult => prevResult + 'o',

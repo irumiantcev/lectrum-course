@@ -55,7 +55,7 @@ const calculateAdvanced = (...args) => {
     }
 
     return result;
-}
+};
 
 
 
