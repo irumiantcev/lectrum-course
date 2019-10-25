@@ -32,8 +32,8 @@ const createFibonacciGenerator = () => {
             prevResult = null;
             result = null;
         }
-    }
-}
+    };
+};
 
 const generator1 = createFibonacciGenerator();
 

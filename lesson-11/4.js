@@ -49,8 +49,8 @@ const createLogger = () => {
         },
 
         print: () => printArray
-    }
-}
+    };
+};
 
 const returnIdentity = n => n;
 const sum = (a, b) => a + b;

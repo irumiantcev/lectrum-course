@@ -20,7 +20,7 @@
 const randomInteger = (min, max) => {
     const rand = min + Math.random() * (max - min);
     return Math.round(rand);
-}
+};
 
 const min = 1;
 const max = 100;
@@ -37,13 +37,13 @@ const createNumberGenerator = () => {
 
         do {
             randomNumber = randomInteger(min, max);
-        } while (array.find((item) => item === randomNumber))
+        } while (array.find((item) => item === randomNumber));
 
         array.push(randomNumber);
 
         return randomNumber;
-    }
-}
+    };
+};
 
 
 
