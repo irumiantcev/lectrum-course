@@ -32,7 +32,7 @@ function every(array, callback) {
     if (typeof callback !== 'function') {
         throw new Error(`Argument ${callback} is not a function`);
     }
-    
+
     for (let i = 0; i < array.length; i++) {
         if (!callback(array[i], i, array)) {
             return false;

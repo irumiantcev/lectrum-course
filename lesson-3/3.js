@@ -19,7 +19,7 @@
 function truncate(string, maxLength) {
     if (typeof string === 'string' && typeof maxLength === 'number') {
         if (string.length > maxLength && maxLength > 3) {
-            return string.slice(0, maxLength-3).concat('...');
+            return string.slice(0, maxLength - 3).concat('...');
         } else {
             return string;
         }

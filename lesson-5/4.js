@@ -19,7 +19,7 @@
 
 // Решение
 
-function f(n){
+function f(n) {
     if (arguments.length === 0) {
         throw new Error(`Insufficient arguments`);
     }
@@ -29,7 +29,7 @@ function f(n){
     }
 
     if (n < 1 || n > 7) {
-        throw new Error(`Number ${n} is out of range`); 
+        throw new Error(`Number ${n} is out of range`);
     }
 
     if (!Number.isInteger(n)) {

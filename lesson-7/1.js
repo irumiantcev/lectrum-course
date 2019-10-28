@@ -33,21 +33,21 @@ const array = [
 
 function inspect(array) {
     if (arguments.length === 0) {
-        throw new Error (`No arguments`);
+        throw new Error(`No arguments`);
     }
 
     if (!Array.isArray(array)) {
-        throw new Error (`Argument ${array} is not an array`);
+        throw new Error(`Argument ${array} is not an array`);
     }
 
     let result = [];
 
     result = array.filter(function(item) {
-        return typeof item === 'string';
-    })
-    .map(function(item) {
-        return item.length;
-    });
+            return typeof item === 'string';
+        })
+        .map(function(item) {
+            return item.length;
+        });
 
     return result;
 }

@@ -11,9 +11,9 @@
 
 function f(n) {
     if (arguments.length === 0) {
-        throw new Error (`No arguments`);
+        throw new Error(`No arguments`);
     }
-    
+
     if (typeof n !== 'number') {
         throw new Error(`Argument ${n} is not a number`);
     }

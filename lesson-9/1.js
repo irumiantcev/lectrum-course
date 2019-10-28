@@ -18,18 +18,18 @@
 
 function shallowMerge(object1, object2) {
     if (arguments.length === 0) {
-        throw new Error (`No arguments`);
+        throw new Error(`No arguments`);
     }
 
     const resultObject = {};
 
     for (const item of arguments) {
         if (typeof item !== 'object') {
-            throw new Error (`Argument ${item} is not an object`);
-        }       
+            throw new Error(`Argument ${item} is not an object`);
+        }
 
         const properties = Object.getOwnPropertyDescriptors(item);
-        
+
         Object.defineProperties(resultObject, properties);
     }
 

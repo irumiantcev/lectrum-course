@@ -79,7 +79,7 @@ const result = calculateAdvanced(
     },
     prevResult => {
         return prevResult * 5;
-    },
+    }
 );
 
 console.log(result);

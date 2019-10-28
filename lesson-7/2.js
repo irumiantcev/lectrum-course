@@ -22,11 +22,11 @@
 
 function collect(array) {
     if (arguments.length === 0) {
-        throw new Error (`No arguments`);
+        throw new Error(`No arguments`);
     }
 
     if (!Array.isArray(array)) {
-        throw new Error (`Argument ${array} is not an array`);
+        throw new Error(`Argument ${array} is not an array`);
     }
 
     const sum = array.reduce(function(acc, value) {
@@ -34,7 +34,7 @@ function collect(array) {
             acc += collect(value);
         } else {
             if (typeof value !== 'number') {
-                throw new Error (`Argument ${value} is not a number`);
+                throw new Error(`Argument ${value} is not a number`);
             }
 
             acc += value;
@@ -46,19 +46,60 @@ function collect(array) {
     return sum;
 }
 
-const array1 = [[[1, 2], [1, 2]], [[2, 1], [1, 2]]];
+const array1 = [
+    [
+        [1, 2],
+        [1, 2]
+    ],
+    [
+        [2, 1],
+        [1, 2]
+    ]
+];
 console.log(collect(array1)); // 12
 
-const array2 = [[[[[1, 2]]]]];
+const array2 = [
+    [
+        [
+            [
+                [1, 2]
+            ]
+        ]
+    ]
+];
 console.log(collect(array2)); // 3
 
-const array3 = [[[[[1, 2]]], 2], 1];
+const array3 = [
+    [
+        [
+            [
+                [1, 2]
+            ]
+        ], 2
+    ], 1
+];
 console.log(collect(array3)); // 6
 
-const array4 = [[[[[]]]]];
+const array4 = [
+    [
+        [
+            [
+                []
+            ]
+        ]
+    ]
+];
 console.log(collect(array4)); // 0
 
-const array5 = [[[[[], 3]]]];
+const array5 = [
+    [
+        [
+            [
+                [], 3
+            ]
+        ]
+    ]
+];
 console.log(collect(array5)); // 3
 
 exports.collect = collect;

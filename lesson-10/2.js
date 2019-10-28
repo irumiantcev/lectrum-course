@@ -48,7 +48,7 @@ const result = calculate(
     },
     prevResult => {
         return prevResult * 5;
-    },
+    }
 );
 
 console.log(result); // 55

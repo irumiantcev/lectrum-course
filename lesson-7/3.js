@@ -12,12 +12,12 @@
 
 // Решение
 
-function createArray(value, count){
+function createArray(value, count) {
     if (arguments.length < 2) {
         throw new Error(`Wrong number of arguments`);
     }
 
-    if (typeof value !== 'number' && typeof value !== 'string'  && typeof value !== 'object' && !Array.isArray(value) || value === null) {
+    if (typeof value !== 'number' && typeof value !== 'string' && typeof value !== 'object' && !Array.isArray(value) || value === null) {
         throw new Error(`${value} - Invalid argument type`);
     }
 

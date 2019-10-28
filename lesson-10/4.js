@@ -63,14 +63,14 @@ const result1 = compose(
     prevResult => prevResult + 'o',
     prevResult => prevResult + 'l',
     prevResult => prevResult + 'l',
-    prevResult => prevResult + 'e',
+    prevResult => prevResult + 'e'
 )('h');
 const result2 = compose(
     prevResult => prevResult + 'o',
     prevResult => prevResult + 'l',
     prevResult => prevResult + 'l',
     prevResult => prevResult + 'e',
-    () => 'h',
+    () => 'h'
 )();
 
 console.log(result1); // 'hello'

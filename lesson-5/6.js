@@ -12,7 +12,7 @@
 
 // Решение
 
-function isEven(n){
+function isEven(n) {
     if (arguments.length === 0) {
         throw new Error(`Insufficient arguments`);
     }

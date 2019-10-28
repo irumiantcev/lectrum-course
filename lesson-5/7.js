@@ -11,7 +11,7 @@
 
 // Решение
 
-function getDivisors(n){
+function getDivisors(n) {
     if (arguments.length === 0) {
         throw new Error(`Insufficient arguments`);
     }
@@ -21,7 +21,7 @@ function getDivisors(n){
     }
 
     if (n < 1) {
-        throw new Error(`Number ${n} is out of range`); 
+        throw new Error(`Number ${n} is out of range`);
     }
 
     if (!Number.isInteger(n)) {

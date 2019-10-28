@@ -13,9 +13,9 @@
 
 function upperCaseFirst(string) {
     if (typeof string === 'string') {
-        const firstLetterUpper = string.slice(0,1).toUpperCase();
+        const firstLetterUpper = string.slice(0, 1).toUpperCase();
         const otherLetters = string.slice(1);
-        
+
         return firstLetterUpper + otherLetters;
     } else {
         return false;

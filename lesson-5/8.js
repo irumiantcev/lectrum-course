@@ -17,13 +17,13 @@
 
 // Решение
 
-function f(arr){
+function f(arr) {
     if (arguments.length === 0) {
         throw new Error(`Insufficient arguments`);
     }
 
     if (!Array.isArray(arr)) {
-        throw new Error(`Argument ${arr} is not an array`); 
+        throw new Error(`Argument ${arr} is not an array`);
     }
 
     if (arr.length === 0) {
