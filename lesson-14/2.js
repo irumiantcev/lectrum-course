@@ -22,7 +22,7 @@ function CleanerRobot(initialEnergy = 0 /* Изначальный заряд б�
 
     this.setEnergy(initialEnergy);
 
-    function validateEnegry(energy) {
+    function validateEnergy(energy) {
         if (energy < 0) {
             throw new Error(`New energy level can not be less than 0.`);
         }
@@ -39,7 +39,7 @@ function CleanerRobot(initialEnergy = 0 /* Изначальный заряд б�
     function setEnergy() {
         const newEnergy = arguments[0];
 
-        validateEnegry(newEnergy);
+        validateEnergy(newEnergy);
 
         energy = newEnergy;
     }
