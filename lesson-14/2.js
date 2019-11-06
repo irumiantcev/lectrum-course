@@ -36,9 +36,7 @@ function CleanerRobot(initialEnergy = 0 /* Изначальный заряд б�
         return energy;
     }
 
-    function setEnergy() {
-        const newEnergy = arguments[0];
-
+    function setEnergy(newEnergy) {
         validateEnergy(newEnergy);
 
         energy = newEnergy;
