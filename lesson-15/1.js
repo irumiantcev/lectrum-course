@@ -21,7 +21,6 @@
  */
 
 Function.prototype.delay = function(ms) {
-
     if (this.length) {
         return (...args) => setTimeout(this, ms, ...args);
     }
