@@ -19,7 +19,7 @@
 
 function CleanerRobot(
     initialEnergy = 0 /* Изначальный заряд батареи робота */ ,
-    cleaningSquare /* Площадь для уборки в метрах. */ ,
+    cleaningSquare = 0 /* Площадь для уборки в метрах. */
 ) {
     let energy = initialEnergy;
     let timerId = 0;
