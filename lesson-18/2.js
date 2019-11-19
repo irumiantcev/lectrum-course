@@ -131,12 +131,12 @@ class DB {
                     break;
                 }
 
-                if (param === ('country' || 'name') && value[param] !== object[param]) {
+                if ((param === 'country' || param === 'name') && value[param] !== object[param]) {
                     find = false;
                     break;
                 }
 
-                if (param === ('age' || 'salary')) {
+                if (param === 'age' || param === 'salary') {
                     if (object[param].hasOwnProperty('min') && value[param] < object[param]['min']) {
                         find = false;
                         break;
