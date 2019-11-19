@@ -12,8 +12,8 @@
 
 // Решение
 class DB {
-	#count = 0;
-	#map = new Map();
+    #count = 0;
+    #map = new Map();
 
     create(object) {
         const params = ['name', 'age', 'country', 'salary'];
