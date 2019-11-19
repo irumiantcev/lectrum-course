@@ -116,29 +116,32 @@ class DB {
     }
 
     find(object) {
-
         if (Object.keys(object).length === 0) {
             throw new Error(`Object is not valid`);
         }
 
         const resultArr = [];
-        const params = ['name', 'age', 'country', 'salary'];
 
         this.#map.forEach((value) => {
             let find = true;
 
-            for (const param of params) {
-                if (param === 'country' && object.hasOwnProperty(param) && value[param] !== object[param]) {
+            for (const param in object) {
+                if (!value.hasOwnProperty(param)) {
                     find = false;
                     break;
                 }
 
-                if (param === 'name' && object.hasOwnProperty(param) && value[param] !== object[param]) {
+                if (param === 'country' && value[param] !== object[param]) {
                     find = false;
                     break;
                 }
 
-                if (param === 'age' && object.hasOwnProperty(param)) {
+                if (param === 'name' && value[param] !== object[param]) {
+                    find = false;
+                    break;
+                }
+
+                if (param === 'age') {
                     if (object[param].hasOwnProperty('min') && value[param] < object[param]['min']) {
                         find = false;
                         break;
@@ -150,7 +153,7 @@ class DB {
                     }
                 }
 
-                if (param === 'salary' && object.hasOwnProperty(param)) {
+                if (param === 'salary') {
                     if (object[param].hasOwnProperty('min') && value[param] < object[param]['min']) {
                         find = false;
                         break;
@@ -188,7 +191,7 @@ const person2 = {
     name: "Jack", // обязательное поле с типом string
     age: 24, // обязательное поле с типом number
     country: "ua", // обязательное поле с типом string
-    salary: 330 // обязательное поле с типом number
+    salary: 3300 // обязательное поле с типом number
 };
 
 const id = db.create(person);
