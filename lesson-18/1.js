@@ -69,8 +69,8 @@ class DB {
             return null;
         }
 
-        const returnObj = {};
-        returnObj[id] = this.#map.get(id);
+        const returnObj = this.#map.get(id);
+        returnObj['id'] = id;
 
         return returnObj;
     }
