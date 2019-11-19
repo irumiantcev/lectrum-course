@@ -131,17 +131,12 @@ class DB {
                     break;
                 }
 
-                if (param === 'country' && value[param] !== object[param]) {
+                if (param === ('country', 'name') && value[param] !== object[param]) {
                     find = false;
                     break;
                 }
 
-                if (param === 'name' && value[param] !== object[param]) {
-                    find = false;
-                    break;
-                }
-
-                if (param === 'age') {
+                if (param === ('age', 'salary')) {
                     if (object[param].hasOwnProperty('min') && value[param] < object[param]['min']) {
                         find = false;
                         break;
@@ -152,19 +147,6 @@ class DB {
                         break;
                     }
                 }
-
-                if (param === 'salary') {
-                    if (object[param].hasOwnProperty('min') && value[param] < object[param]['min']) {
-                        find = false;
-                        break;
-                    }
-
-                    if (object[param].hasOwnProperty('max') && value[param] > object[param]['max']) {
-                        find = false;
-                        break;
-                    }
-                }
-
             }
 
             if (find) {
@@ -191,7 +173,7 @@ const person2 = {
     name: "Jack", // обязательное поле с типом string
     age: 24, // обязательное поле с типом number
     country: "ua", // обязательное поле с типом string
-    salary: 3300 // обязательное поле с типом number
+    salary: 330 // обязательное поле с типом number
 };
 
 const id = db.create(person);
