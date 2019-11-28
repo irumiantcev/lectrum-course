@@ -28,7 +28,7 @@ class Customers {
     }
 
     *[Symbol.iterator]() {
-        const resultArr = this.arr.filter((obj) => obj.verified);
+        const resultArr = this.arr.filter(obj => obj.verified);
 
         for (const item of resultArr) {
             yield item;

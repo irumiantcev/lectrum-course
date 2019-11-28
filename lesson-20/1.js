@@ -33,7 +33,7 @@ class Customers {
 
     [Symbol.iterator]() {
         let i = 0;
-        const resultArr = this.arr.filter((obj) => obj.verified);
+        const resultArr = this.arr.filter(obj => obj.verified);
 
         return {
             next: () => {
