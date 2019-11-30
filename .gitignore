@@ -9,3 +9,6 @@ ex_files
 Thumbs.db
 __MACOSX/
 test/
+*node_modules/
+*package.json
+*package-lock.json
