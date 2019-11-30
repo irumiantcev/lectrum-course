@@ -25,7 +25,6 @@ const url = 'https://lab.lectrum.io/geo/api/countries';
 
 // Решение
 
-
 class Countries {
     constructor(url) {
         if (typeof url !== 'string') {
@@ -34,7 +33,6 @@ class Countries {
 
         this.url = url;
     }
-
 
     send(size) {
         if (typeof size !== 'number') {
@@ -57,7 +55,6 @@ class Countries {
         return promise;
     }
 }
-
 
 
 const countries = new Countries(url);

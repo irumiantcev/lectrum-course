@@ -19,7 +19,6 @@
 const getCustomers = (customers, countries) => {
     const promise = new Promise((resolve, reject) => {
         const customersVerified = customers.filter(item => item.verified === true);
-
         const result = [];
 
         for (const customerObject of customersVerified) {
@@ -34,7 +33,6 @@ const getCustomers = (customers, countries) => {
 
         resolve(result);
     });
-
 
     return promise;
 };

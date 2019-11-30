@@ -25,8 +25,6 @@ const isCustomerVerified = obj => {
 };
 
 
-
-
 // Пример использования
 const personFirst = {
     name: 'Oliver',
