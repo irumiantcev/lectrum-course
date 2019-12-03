@@ -29,7 +29,7 @@ const url = 'https://lab.lectrum.io/geo/api/countries?size=2';
 const send = url => {
     const promise = new Promise((resolve, reject) => {
         get(url, (error, meta, body) => {
-            if (meta.status === 200) {
+            if (meta && meta.status === 200) {
                 const { data } = JSON.parse(body);
                 resolve(data);
             }

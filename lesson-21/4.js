@@ -43,7 +43,7 @@ class Countries {
             const url = this.url + `?size=${size}`;
 
             get(url, (error, meta, body) => {
-                if (meta.status === 200) {
+                if (meta && meta.status === 200) {
                     const { data } = JSON.parse(body);
                     resolve(data);
                 }

@@ -18,7 +18,7 @@
 
 const getCustomers = (customers, countries) => {
     const promise = new Promise((resolve, reject) => {
-        const customersVerified = customers.filter(item => item.verified === true);
+        const customersVerified = customers.filter(item => item.verified && typeof item.verified === 'boolean');
         const result = [];
 
         for (const customerObject of customersVerified) {
