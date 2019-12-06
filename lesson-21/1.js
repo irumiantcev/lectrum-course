@@ -18,7 +18,11 @@
 
 const isCustomerVerified = obj => {
     const promise = new Promise((resolve, reject) => {
-        obj.verified && typeof obj.verified === 'boolean' ? resolve(obj.verified) : reject(`Customer is not verified`);
+        if (obj.verified && typeof obj.verified === 'boolean') {
+            resolve(obj.verified);
+        }
+
+        reject(`Customer is not verified`);
     });
 
     return promise;
