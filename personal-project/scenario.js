@@ -62,5 +62,4 @@ const scenario = [{
     },
 ];
 
-
 module.exports = scenario;

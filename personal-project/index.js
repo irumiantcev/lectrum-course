@@ -7,7 +7,6 @@ const log = data => {
 
 const transaction = new Transaction();
 
-
 (async () => {
     try {
         await transaction.dispatch(scenario);
